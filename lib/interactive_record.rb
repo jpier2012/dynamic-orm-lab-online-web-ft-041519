@@ -79,13 +79,14 @@ class InteractiveRecord
     sql = ""
 
     hash.each do |k, v|
+      v = "\'#{v}\'" if v.is_a?(String)
+      end
+      sql = <<-SQL
+      SELECT *
+      FROM #{table_name}
+      WHERE #{k} = #{v}
+      SQL
     end
-    sql = <<-SQL
-    SELECT *
-    FROM #{table_name}
-    WHERE name = \'#{name}\'
-    SQL
-
     DB[:conn].execute(sql)
   end
 
