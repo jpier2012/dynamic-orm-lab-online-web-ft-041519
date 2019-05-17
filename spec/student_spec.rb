@@ -93,7 +93,7 @@ describe Student do
     describe '#save' do
       it 'saves the student to the db' do
         new_student.save
-        expect(DB[:conn].execute("SELECT * FROM students WHERE name = 'Sam'")).to eq([{"id"=>1, "name"=>"Sam"}])
+        expect(DB[:conn].execute("SELECT * FROM students WHERE name = 'Sam'")).to eq([{"id"=>1, "name"=>"Sam", "grade"=>11}])
       end
 
       it 'sets the student\'s id' do
