@@ -29,7 +29,7 @@ class InteractiveRecord
   end
 
   def initialize(options = {})
-    self.attr_accessor
+    self.class.attr_accessor
         binding.pry
 
     options.each do |key, value|
