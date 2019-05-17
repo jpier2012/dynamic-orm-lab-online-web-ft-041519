@@ -36,7 +36,8 @@ class InteractiveRecord
 
   def self.attr_accessor
     self.column_names.each do |attr|
-    attr_accessor attr.to_sym
+      attr_accessor attr.to_sym
+    end
   end
 
 end
