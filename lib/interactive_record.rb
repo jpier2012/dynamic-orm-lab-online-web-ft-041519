@@ -26,6 +26,7 @@ class InteractiveRecord
 
     # remove nils from the array
     column_names.compact
+    binding.pry
   end
 
   def initialize(options = {})
