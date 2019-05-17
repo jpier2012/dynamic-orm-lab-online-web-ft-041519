@@ -28,14 +28,14 @@ class InteractiveRecord
     column_names.compact
   end
 
-  def intialize(options = {})
+  def initialize(options = {})
     hash.each do |key, value|
       self.send("#{key}=", value)
     end
   end
 
   def self.attr_accessor
-
+    
   end
 
 end
