@@ -37,5 +37,5 @@ class InteractiveRecord
   self.attr_accessor.each do |attr|
     attr_accessor attr.to_sym
   end
-  
+
 end
