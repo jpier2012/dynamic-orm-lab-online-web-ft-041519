@@ -75,7 +75,11 @@ class InteractiveRecord
     DB[:conn].execute(sql)
   end
 
-  def self.find_by(options = {})
+  def self.find_by(hash)
+    sql = ""
+
+    hash.each do |k, v|
+    end
     sql = <<-SQL
     SELECT *
     FROM #{table_name}
