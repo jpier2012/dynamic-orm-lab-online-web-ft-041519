@@ -34,7 +34,8 @@ class InteractiveRecord
     end
   end
 
-  def self.attr_accessor.each do |attr|
+  def self.attr_accessor
+    self.column_names.each do |attr|
     attr_accessor attr.to_sym
   end
 
