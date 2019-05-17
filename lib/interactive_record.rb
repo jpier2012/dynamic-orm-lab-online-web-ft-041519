@@ -11,7 +11,7 @@ class InteractiveRecord
     DB[:conn].results_as_hash = true
 
     # next build the SQL query that will pull the column names from the table using PRAGMA
-    sql = "PRAGMA table_info('#{self.table_name}')"
+    sql = "PRAGMA table_info('#{table_name}')"
   end
 
 end
