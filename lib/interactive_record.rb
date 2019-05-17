@@ -29,7 +29,6 @@ class InteractiveRecord
   end
 
   def initialize(options = {})
-    self.class.attr_accessor
     options.each do |key, value|
       self.send("#{key}=", value)
     end
