@@ -54,7 +54,7 @@ describe Student do
     end
   end  
   
-  describe 'attr_accessor' do 
+  describe 'attr_accessors' do 
     it 'creates attr_accessors for each column name' do 
       old_name = new_student.name
       new_name = new_student.name = "Jo"
