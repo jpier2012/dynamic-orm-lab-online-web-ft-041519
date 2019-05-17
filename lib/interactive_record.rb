@@ -34,8 +34,8 @@ class InteractiveRecord
     end
   end
 
-  self.attr_accessor.each do |attr|
+  def self.attr_accessor.each do |attr|
     attr_accessor attr.to_sym
   end
-
+  
 end
