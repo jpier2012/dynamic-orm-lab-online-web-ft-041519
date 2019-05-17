@@ -80,7 +80,6 @@ class InteractiveRecord
 
     hash.each do |k, v|
       v = "\'#{v}\'" if v.is_a?(String)
-      end
       sql = <<-SQL
       SELECT *
       FROM #{table_name}
