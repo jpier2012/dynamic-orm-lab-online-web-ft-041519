@@ -13,10 +13,16 @@ class InteractiveRecord
     # next build the SQL query that will pull the column names from the table using PRAGMA
     sql = "PRAGMA table_info('#{table_name}')"
 
-    # next find a way to house the column names
+    # capture the table info hash containing column names
     table_info = DB[:conn].execute(sql)
 
-    # colu
+    # store specifically the column names
+    column_names = []
+
+    # iterate through the table_info hash to add the column names to the column_names array
+    table_info.each do |row|
+      column_names << row["name"]
+    end
   end
 
 end
