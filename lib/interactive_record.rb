@@ -30,6 +30,7 @@ class InteractiveRecord
 
   def initialize(options = {})
     self.class.attr_accessors
+    binding.pry
     options.each do |key, value|
       self.send("#{key}=", value)
     end
