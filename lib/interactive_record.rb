@@ -72,7 +72,7 @@ class InteractiveRecord
     WHERE name = \'#{name}\'
     SQL
 
-    DB[:conn].execute(sql)[0]
+    DB[:conn].execute(sql)
   end
 
 end
