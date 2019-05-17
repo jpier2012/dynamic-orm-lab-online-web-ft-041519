@@ -28,7 +28,7 @@ class InteractiveRecord
     column_names.compact
   end
 
-  def initialize(options = {}, id = nil)
+  def initialize(options = {})
     options.each do |key, value|
       self.send("#{key}=", value)
     end
