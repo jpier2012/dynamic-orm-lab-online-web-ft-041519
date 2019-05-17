@@ -28,8 +28,10 @@ class InteractiveRecord
     column_names.compact
   end
 
-  def intialize(options = {})
-
+  def intialize(hash)
+    hash.each do |key, value|
+      self.send("#{key}=", value)
+    end
   end
 
 end
