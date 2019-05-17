@@ -7,16 +7,11 @@ class InteractiveRecord
   end
 
   def self.column_names
-    DB[:conn].results_has_hash = true
+    # first set the DB return values to hash
+    DB[:conn].results_as_hash = true
 
-    sql = "PRAGMA table_info('#{table_name}')"
-
-    table_info = DB[:conn].execute(sql)
-    column_names = []
-    table_info.each do |row|
-      column_names = [] << row["name"]
-    end
-    column_names.compact
+    # next build the SQL query that will pull the column names from the table using PRAGMA
+    sql = "PRAGMA table_info('#{self.table_name}')"
   end
 
 end
