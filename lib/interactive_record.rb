@@ -29,14 +29,13 @@ class InteractiveRecord
   end
 
   def initialize(options = {})
-            binding.pry
-    self.class.attr_accessor
+    self.class.attr_accessors
     options.each do |key, value|
       self.send("#{key}=", value)
     end
   end
 
-  def self.attr_accessor
+  def self.attr_accessors
     self.column_names.each { |col_name| attr_accessor col_name.to_sym }
   end
 
