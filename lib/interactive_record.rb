@@ -23,6 +23,9 @@ class InteractiveRecord
     table_info.each do |row|
       column_names << row["name"]
     end
+
+    # remove nils from the array
+    column_names.compact
   end
 
 end
