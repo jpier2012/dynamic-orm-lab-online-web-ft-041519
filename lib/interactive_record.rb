@@ -35,7 +35,7 @@ class InteractiveRecord
   end
 
   def self.attr_accessor
-    
+
   end
 
 end
