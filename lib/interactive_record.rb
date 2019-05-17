@@ -72,7 +72,7 @@ class InteractiveRecord
     WHERE name = ?
     SQL
 
-    DB[:conn].execute(sql, table_name, name)
+    DB[:conn].execute(sql, table_name, name)[0]
   end
 
 end
