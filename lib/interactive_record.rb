@@ -29,7 +29,7 @@ class InteractiveRecord
   end
 
   def initialize(options = {})
-    hash.each do |key, value|
+    options.each do |key, value|
       self.send("#{key}=", value)
     end
   end
