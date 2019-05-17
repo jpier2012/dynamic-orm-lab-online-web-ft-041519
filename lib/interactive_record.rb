@@ -30,4 +30,6 @@ class InteractiveRecord
 
   def intialize(options = {})
 
+  end
+
 end
