@@ -57,11 +57,11 @@ class InteractiveRecord
 
   def save
     sql = <<-SQL
-    INSERT INTO #{table_name_for_insert} (#{col_names_for_insert})
-    VALUES (#{values_for_insert})
+    INSERT INTO ? (?)
+    VALUES (?)
 
     SQL
-    DB[:conn].execute(sql)
+    DB[:conn].execute(sql, table_name_for_insert, col_names_for_insert, values_for_insert)
   end
 
 end
